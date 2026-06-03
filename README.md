@@ -40,5 +40,11 @@ El archivo `docker-compose.yml` levanta toda la infraestructura bajo una red int
 
 Para levantar el proyecto completo en tu entorno local, asegúrate de tener instalado Docker y Docker Compose, y ejecuta el siguiente comando en la raíz del proyecto:
 
-```bash
 docker-compose up --build -d
+
+Para verificar que los contenedores están corriendo:
+docker ps
+
+Una vez levantado, accede a la interfaz gráfica a través de tu navegador en: http://localhost
+
+

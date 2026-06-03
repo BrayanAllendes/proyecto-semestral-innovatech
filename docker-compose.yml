@@ -32,7 +32,7 @@ services:
   # 3. Backend Ventas
   back-ventas:
     build: 
-      context: ./back-Ventas_SpringBoot/Springboot-API-REST-VENTA
+      context: ./back-Ventas_SpringBoot/Springboot-API-REST
     container_name: backend_ventas
     ports:
       - "8081:8080"

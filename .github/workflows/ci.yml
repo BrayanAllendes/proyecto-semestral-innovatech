@@ -1,0 +1,21 @@
+name: Integración Continua (CI) - Innovatech
+
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  test-contenedores:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Obtener el código
+        uses: actions/checkout@v3
+
+      - name: 2. Construir y levantar Docker
+        run: docker-compose up --build -d
+
+      - name: 3. Verificar contenedores
+        run: docker ps
+
+      - name: 4. Apagar entorno
+        run: docker-compose down
